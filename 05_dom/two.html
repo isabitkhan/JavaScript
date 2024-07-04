@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const title = document.head;
+    title.querySelector("title").innerHTML = "JavaScript";
+    const body = document.body.style;
+    body.backgroundColor = "#212121";
+    body.color = "#fff";
+    const h1 = document.createElement("h1");
+    document.querySelector("body").appendChild(h1);
+    function addText(text) {
+      h1.innerText = "Courses";
+      const ul = document.createElement("ul");
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(`${text}`));
+      // li.innerHTML = `<li>${text}</li>`;
+      ul.appendChild(li);
+      document.querySelector("body").appendChild(ul);
+    }
+    addText("css");
+    addText("JavaScript");
+    addText("JavaScript");
+
+    // edit
+
+    const li = document.querySelectorAll("li");
+    console.log(li);
+    const newLi = document.createElement("li");
+    newLi.textContent = "TypeScript";
+    li[1].replaceWith(newLi);
+  </script>
+</html>

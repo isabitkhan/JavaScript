@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add element</title>
+  </head>
+  <body></body>
+  <script>
+    const title = document.head;
+    title.querySelector("title").innerHTML = "JavaScript";
+    const body = document.body.style;
+    body.backgroundColor = "#212121";
+    body.color = "#fff";
+    for (let i = 1; i < 3; i++) {
+      const div = document.createElement("div");
+      div.id = Math.round(Math.random() * 10 + 1);
+      div.className = "Sabit-div";
+      div.style.backgroundColor = "green";
+      div.style.padding = "20px";
+      div.style.fontSize = "20px";
+      div.setAttribute("title", "Sabit khan div");
+      const addText = document.createTextNode(
+        "Sabit khan javaScript code with chai our code"
+      );
+      div.appendChild(addText);
+      //   div.innerHTML =
+      // "<h4> Sabit khan javaScript code with chai our code</h4> ";
+      document.body.appendChild(div);
+    }
+  </script>
+</html>
